@@ -21,17 +21,22 @@
 .side__bar {
   background-color: #2f3e51;
   width: 300px;
-  float: left;
   color: #FFF;
   font-weight: bold;
-  height: 100vw;
+  height: 100vh;
+  float: left;
+  display: block;
+
   .side__header {
   background-color: #253141;
   height: 100px;
+  padding: 0 20px;
+  display: flex;
   align-items: center;
     &-title {
-      padding: 0 20px;
-      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
       &-name {
         font-size: 16px;
         float: left;
@@ -40,18 +45,25 @@
         display: flex;
         float: right;
         &-create-group {
+          .create-group {
+            padding-right: 5px;
+            color: #fff;
+          }
         }
         &-edit-user {
+          .edit-user {
+            color: #fff;
+          }
         }
       }
     }
   }
-  .group {
+  .groups {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51; 
+    padding: 20px 20px 0;
+    overflow: scroll;
+
   }
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
-}
