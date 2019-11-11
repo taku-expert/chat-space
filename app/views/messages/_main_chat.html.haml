@@ -1,0 +1,22 @@
+.main__chat
+  .main__header
+    .main__header-leftbox
+      .main__header-leftbox-group-name
+        %h1.group-name group name
+      .main__header-leftbox-members-list
+        %p.members-list Menber :
+    .main__header-rightbox
+      .edit-btn Edit
+  .main__contents
+    .main__contents-user
+      .main__contents-user-title
+        .main__contents-user-title-name name
+        .main__contents-user-title-posttime 2019/xx/xx
+      .main__contents-user-message This is a first message.
+  .main__footer
+    .message-form
+      %input{type: "text", placeholder: "type a message"}
+      %label{class: "inputbox-image"}
+        %i.far.fa-image
+        %input{type: "file", class: "image-file"}
+    %input{type: "submit", class: "submit-btn", value: "Send"}

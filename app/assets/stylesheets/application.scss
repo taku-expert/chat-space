@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "./reset";
+ @import "font-awesome-sprockets";
+ @import "./font-awesome";
+ @import "./side__bar";
+ @import "./main__chat";
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-weight: bold;
+}
+
+
+

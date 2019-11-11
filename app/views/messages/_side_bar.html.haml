@@ -1,0 +1,14 @@
+.side__bar
+  .side__header
+    .side__header-title
+      %h1.side__header-title-name NAME
+      %ul.side__header-title-list
+        %li.side__header-title-list-create-group
+          =link_to "#", class: "create-group" do
+            %i.far.fa-sticky-note
+        %li.side__header-title-list-edit-user
+          =link_to "#", class: "edit-user" do
+            %i.fas.fa-cog
+  .groups
+    =link_to "#", class: "groups-name" do
+      <p>groups-name</p>
