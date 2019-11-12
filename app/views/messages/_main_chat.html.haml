@@ -6,7 +6,9 @@
       .main__header-leftbox-members-list
         %p.members-list Menber :
     .main__header-rightbox
-      .edit-btn Edit
+      .edit-btn 
+        =link_to edit_user_path(current_user), class: "edit-user" do
+          edit
   .main__contents
     .main__contents-user
       .main__contents-user-title
