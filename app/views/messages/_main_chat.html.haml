@@ -2,23 +2,24 @@
   .main__header
     .main__header-leftbox
       .main__header-leftbox-group-name
-        %h1.group-name group name
+        %h1.group-name 
+          =@group.name
       .main__header-leftbox-members-list
         %p.members-list Menber :
+        %li.member-list
+          - @group.users.each do |user|
+            = user.name
     .main__header-rightbox
       .edit-btn 
-        =link_to edit_user_path(current_user), class: "edit-user" do
+        =link_to edit_group_path(current_user), class: "edit-user" do
           edit
   .main__contents
-    .main__contents-user
-      .main__contents-user-title
-        .main__contents-user-title-name name
-        .main__contents-user-title-posttime 2019/xx/xx
-      .main__contents-user-message This is a first message.
-  .main__footer
-    .message-form
-      %input{type: "text", placeholder: "type a message"}
-      %label{class: "inputbox-image"}
-        %i.far.fa-image
-        %input{type: "file", class: "image-file"}
-    %input{type: "submit", class: "submit-btn", value: "Send"}
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

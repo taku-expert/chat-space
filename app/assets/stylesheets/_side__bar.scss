@@ -38,6 +38,19 @@
     background-color: #2f3e51; 
     padding: 20px 20px 0;
     overflow: scroll;
+    .group-messages {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      margin-bottom: 40px;
+      .group__name {
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      .group__message {
+        font-size: 11px;
+      }
+    }
   }
 }
 
