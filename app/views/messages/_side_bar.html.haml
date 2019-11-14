@@ -2,7 +2,7 @@
   .side__header
     .side__header-title
       %h1.side__header-title-name 
-        = current_user.name
+        =current_user.name
       %ul.side__header-title-list
         %li.side__header-title-list-create-group
           =link_to new_group_path, class: "create-group" do
@@ -13,8 +13,8 @@
   .groups
     - current_user.groups.each do |group|
       .group
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group), class: "group-messages" do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
