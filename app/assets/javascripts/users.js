@@ -19,7 +19,6 @@ $(function(){
                </div>
                `;
                $('#user-search-result').append(html);
-
   }
   function  addDeleteUser(userName,userId){
     var html = `
