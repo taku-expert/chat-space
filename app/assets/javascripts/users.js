@@ -1,4 +1,5 @@
 $(function(){
+
   function addUser(username, user_id) {
     var html = `
               <div class="chat-group-user clearfix">
@@ -12,6 +13,7 @@ $(function(){
               `;
               $('#user-search-result').append(html);
   }
+
   function addNoUser() {
     var html = `
                <div class="chat-group-user clearfix">
@@ -20,6 +22,7 @@ $(function(){
                `;
                $('#user-search-result').append(html);
   }
+
   function  addDeleteUser(userName,userId){
     var html = `
             <div class='chat-group-user'>
@@ -32,10 +35,12 @@ $(function(){
             `;
             $('#chat-group-users').append(html);
   }
+
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
   }
+
   $('#user-search-field').on('keyup', function() {
     $('#user-search-result').empty();
     var input = $('#user-search-field').val();
@@ -62,6 +67,7 @@ $(function(){
         alert("該当するユーザーが見当たりません。");
       });
   });
+
   $(document).on('click', '.chat-group-user__btn--add', function(){
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
@@ -76,4 +82,5 @@ $(function(){
       .parent()
       .remove();
   });
+
 });
