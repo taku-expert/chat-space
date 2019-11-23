@@ -43,7 +43,6 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     })
   })
-
   var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
       var last_message_id = $('.main__contents-user:last').data('messageid');
