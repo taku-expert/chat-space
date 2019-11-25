@@ -4,11 +4,10 @@
     height: 99px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
     &-leftbox {
       &-group-name {
         padding: 35px 0 15px 40px;
-        font-size: 20px;
         color: #333333;;
       }
       &-members-list {
@@ -27,13 +26,18 @@
       .edit-btn {
         border: solid #38aef0;
         border-width: thin;
-        color: #38aef0;
         margin-top: 28px;
-        padding: 0 20px;
         height: 40px;
-        line-height: 100%;
+        line-height: 40px;
         display: flex;
         align-items: center;
+
+      }
+      .edit-btn a {
+        color: #38aef0;
+        text-decoration: none;
+        display: block;
+        padding: 0 20px;
       }
     }
   }
